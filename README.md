@@ -8,7 +8,7 @@ This repository aims at gathering in the same place the different models built f
 
 Conjugation is a mechanism allowing transfer of DNA between bacteria.
 
-- Link to models: [Conjugation](https://github.com/gem-pasteur/Macsyfinder_models/Conjugation)
+- Link to models: [Conjugation](https://github.com/gem-pasteur/Macsyfinder_models/tree/master/Data/Conjugation)
 - Webserver version: [Galaxy](https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr%2Frepos%2Fodoppelt%2Fconjscan%2FConjScan%2F1.0.2)
 - Citations:
 
