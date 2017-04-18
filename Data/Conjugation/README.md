@@ -1,6 +1,6 @@
-# Conjugation
+# Conjugation (CONJScan)
 
-This folder contains definitions for the 8 types of conjugative systems (MPF B, C, F, FA, FATA, G, I, T). It's better to call them one at a time, otherwise in case of tandem or integration of one system into another, macsyfinder might rejects both.
+This folder contains the definitions for the 8 types of conjugative systems (MPF B, C, F, FA, FATA, G, I, T). It's better to call them one at a time, otherwise in case of tandem or integration of one system into another, macsyfinder might rejects both.
 
 The model `CONJ` is a model that is called by other models, but one can use it to detect systems that are degraded or for which other accessory proteins are absent.
 
