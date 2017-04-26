@@ -9,6 +9,7 @@ The model `MOB` detects any MOB proteins without `virb4` nearby (`forbidden`) an
 The basic command is:
 
     macsyfinder mpf_type \
+                --db-type ordered_replicon \
                 -d Macsyfinder_models/Data/Conjugation/DEF \
                 -p Macsyfinder_models/Data/Conjugation/HMM \
                 --profile-suffix .HMM \
