@@ -4,6 +4,8 @@ Repository containing up-to-date definitions and models for the detection of mac
 
 This repository aims at gathering in the same place the different models built for [MacSyFinder](https://github.com/gem-pasteur/macsyfinder).
 
+To download the entire repository, click on the green button (top right corner of this readme) with "Clone or download" written on it. If you want to download a specific module, go to the specific page of the module, and a link will be provided there.
+
 # Conjugation (CONJScan)
 
 Conjugation is a mechanism allowing transfer of DNA between bacteria.
