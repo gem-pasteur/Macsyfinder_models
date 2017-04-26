@@ -14,6 +14,9 @@ The basic command is:
                 --profile-suffix .HMM \
                 --sequence-db my_protein_file \
 
+# Download
+
+To download only this module: [click here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/gem-pasteur/Macsyfinder_models/tree/master/Data/Conjugation)
 
 # Citation
 
