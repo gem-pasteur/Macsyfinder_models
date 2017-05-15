@@ -19,7 +19,7 @@ The basic command is:
 
 To download only this module: [click here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/gem-pasteur/Macsyfinder_models/tree/master/Data/Conjugation)
 
-# Citation
+# References
 
 - Abby, Sophie S. and Néron, Bertrand and Ménager, Hervé and Touchon, Marie and Rocha, Eduardo P. C. (2014). MacSyFinder: A Program to Mine Genomes for Molecular Systems with an Application to CRISPR-Cas Systems. In PLoS ONE, 9 (10), pp. e110726. [doi:10.1371/journal.pone.0110726](http://dx.doi.org/10.1371/journal.pone.0110726)
 
