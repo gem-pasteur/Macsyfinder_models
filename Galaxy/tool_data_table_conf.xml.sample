@@ -1,0 +1,8 @@
+<!-- Use the file tool_data_table_conf.xml.oldlocstyle if you don't want to update your loc files as changed in revision 4550:535d276c92bc-->
+<tables>
+    <!-- Locations of all fasta files under genome directory -->
+    <table name="conjscan" comment_char="#" allow_duplicate_entries="False">
+        <columns> path_model, path_profile, value, name</columns>
+        <file path="tool-data/conjscan.loc" />
+    </table>
+</tables>
