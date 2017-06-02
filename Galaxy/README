@@ -1,0 +1,10 @@
+Galaxy dir in Macsyfinder_models repository
+--------------------------------------------
+
+Content
+-------
+
+-Conjscan XML for Galaxy: conjscan.xml
+-Conjscan tool-data file to link the Galaxy Conjscan XML to models: conjscan.loc.sample
+-Galaxy config file: tool_data_table_conf.xml: tool_data_table_conf.xml.sample
+-README file with description

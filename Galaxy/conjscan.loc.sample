@@ -1,0 +1,14 @@
+#This file lists the name, models, profile and value for cas_finder  tool in Galaxy
+#files located in path "/local/gensoft2/exe/macsyfinder/1.0.2/share/macsyfinder/systems/Capsules" 
+#
+#
+# path_model, path_profile, type_model, name
+
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM	typeB	typeB
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM 	typeC	typeC
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM 	typeFATA	typeFATA
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM	typeFA	typeFA
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM	typeF	typeF
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM	typeG	typeG
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM 	typeI	typeI
+$PATH2Macsyfinder_models/Data/Conjugation/DEF	$PATH2Macsyfinder_models/Data/Conjugation/HMM	typeT	typeT

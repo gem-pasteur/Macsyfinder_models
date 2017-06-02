@@ -1,0 +1,122 @@
+<tool id="ConjScan" name="ConjScan" version="1.0.2">
+  <description>: MacSyFinder-based detection of Conjugative elements using systems modelling and similarity search</description>
+  <edam_operations>
+        <edam_operation>operation_0436</edam_operation>
+  </edam_operations>
+  <requirements>
+      <requirement type="package" version="3.1b1">hmmer</requirement>
+      <requirement type="package" version="2.2.31">blast+</requirement>
+      <requirement type="package" version="1.0.2">macsyfinder</requirement>
+  </requirements>
+  <command>
+    <![CDATA[ 
+
+macsyfinder  --sequence-db $input --db-type $params.dataset_type    
+
+  --sequence-db $input
+   
+    #if $params.dataset_type in ('ordered_replicon', 'gembase'):
+     --replicon-topology $params.replicon_topo
+    #end if
+
+    -d  ${conj_system.fields.path_model.split()[0]} -p ${conj_system.fields.path_profile.split()[0]}  ${conj_system.fields.type_model} 
+    --worker \${GALAXY_SLOTS} 
+
+#if $hmmer_options.hmmer_type_selector == "tune_hmmer":
+    --e-value-search $hmmer_options.maximal_evalue   --i-evalue-select  $hmmer_options.maximal_ind_evalue   --coverage-profile $hmmer_options.minimal_profile_cov
+    #end if
+     --out-dir conj_output_dir
+ 
+    && 
+    tar cvzf $hmmer_archive conj_output_dir/hmmer_results
+
+ ]]>   
+  </command>
+  <inputs> 
+    <param name="input" type="data" format="fasta" label="Genome to scan"/>
+    <conditional name="params">
+      <param name="dataset_type" type="select" label="The type of dataset to deal with">
+	<option value="unordered_replicon">unordered replicon</option>
+	<option value="unordered">unordered</option>
+	<option value="ordered_replicon">ordered replicon </option>
+	<option value="gembase">gembase</option>
+      </param>
+      <when value="ordered_replicon">
+	<param name="replicon_topo" type="select" label="The topology of the replicon(s).">
+	  <option value="circular">circular</option>
+	  <option value="linear">linear</option>
+	</param>
+      </when>
+      <when value="gembase">
+	<param name="replicon_topo" type="select" label="The topology of the replicon(s).">
+	  <option value="circular">circular</option>
+	  <option value="linear">linear</option>
+	</param>
+      </when>
+    </conditional>
+    <param name="conj_system" type="select" label="Conjugative element to detect" help="">
+      <options from_data_table="conjscan">
+        <column name="name" index="3"/>
+        <column name="value" index="3"/>
+        <column name="type_model" index="2"/>
+        <column name="path_model" index="0"/>
+        <column name="path_profile" index="1"/>
+      </options>
+    </param>
+    <conditional name="hmmer_options" >
+      <param name="hmmer_type_selector" type="select" label="Tune or leave default values to Hmmer options">
+	<option value="default" selected="True">defaults</option>
+	<option value="tune_hmmer">Hmmer settings</option>
+      </param>
+      <when value="default"/>
+      <when value="tune_hmmer">
+	<param name="maximal_evalue" type="float" value="1.0" label="Maximal e-value" help="Maximal e-value for hits to be reported during Hmmer search. (default = 1.0)"  />
+	<param name="maximal_ind_evalue" type="float" value="0.001" label="Maximal independant e-value" help="Maximal independent e-value for Hmmer hits to be selected for system detection. (default = 0.001)" />
+	<param name="minimal_profile_cov" type="float" value="0.5" label="Minimal profile coverage" help="Minimal profile coverage required in the hit alignment to allow the hit selection for system detection.(default = 0.5)"/>
+      </when>
+    </conditional>
+  </inputs>
+  <outputs>
+    <data format="macsyview" name="macsyview_json" label="MacsyView output, $tool.name on $(on_string)" from_work_dir="conj_output_dir/results.macsyfinder.json"/> 
+    <data format="txt" name="summary" label="summary output,$tool.name on ${on_string}" from_work_dir="conj_output_dir/macsyfinder.summary"/>
+    <data format="txt" name="report" label="report output,$tool.name on ${on_string}" from_work_dir="conj_output_dir/macsyfinder.report"/>
+    <data format="txt" name="output" label="output,$tool.name on ${on_string}" from_work_dir="conj_output_dir/macsyfinder.out"/>
+    <data format="macsyfinder" name="summary" label="summary output,$tool.name on ${on_string}" from_work_dir="conj_output_dir/macsyfinder.json"/>
+    <data format="tar" name="hmmer_archive" label="hmmer results archive, $tool.name on ${on_string}"/>
+   </outputs>
+  <tests>
+  </tests>
+  <help>
+    
+**Requirements**: a multifasta file with the protein sequence to be analysed.
+    
+**Information on MacsyFinder**
+Protein secretion systems are important machineries for the cells to interact with their environment.
+In bacteria, these systems are involved in nutriment access, competition, defence, virulence ...
+For instance they are found in plant and animal symbionts and pathogens.
+    
+**MacSyFinder** is a program to model and detect macromolecular systems, genetic pathways in protein datasets.
+In prokaryotes, these systems have often evolutionarily conserved properties:
+they are made of conserved components, and are encoded in compact loci (conserved genetic architecture).
+The user models these systems with MacSyFinder to reflect these conserved features, and to allow their
+efficient detection. The detection of a system is based on the presence of a given amount of mandatory
+and accessory components (searched with Hmmer using the protein profiles) in the pre-defined genetic architecture.
+
+For further informations, please visite the DOCUMENTATION_ for MacsyFinder.
+
+.. _DOCUMENTATION: http://macsyfinder.readthedocs.org/en/latest/index.html
+
+
+
+**Authors**: Jean Cury and Eduardo Rocha
+
+
+
+<citations>
+<citation/>
+</citations>
+
+
+  </help>
+  
+</tool>
