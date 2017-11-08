@@ -8,7 +8,7 @@ The basic command is:
                 --db-type ordered_replicon \
                 -d Macsyfinder_models/Data/TXSS/DEF \
                 -p Macsyfinder_models/Data/TXSS/HMM \
-                --profile-suffix .HMM \
+                --profile-suffix .hmm \
                 --sequence-db my_protein_file
 
 where `secretion_system` is one of the list above, or `all` (see [MacSyFinder's documentation](http://macsyfinder.readthedocs.io/en/latest/))
