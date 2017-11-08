@@ -31,5 +31,4 @@ To download only this module: [click here](https://minhaskamal.github.io/DownGit
 
 If you use the tutorial:
 
-- Jean Cury, Marie Touchon, Eduardo P. C. Rocha, Integrative And Conjugative Elements And Their Hosts: Composition, Distribution, And Organization
-bioRxiv 135814; doi: https://doi.org/10.1101/135814 (submitted to NAR)
+- Jean Cury, Marie Touchon, Eduardo P. C. Rocha, Integrative And Conjugative Elements And Their Hosts: Composition, Distribution, And Organization. Nucleic Acids Res., [doi:10.1093/nar/gkx607](https://doi.org/10.1093/nar/gkx607).
