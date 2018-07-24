@@ -10,7 +10,7 @@ To download the entire repository, click on the green button (top right corner o
 
 Conjugation is a mechanism allowing transfer of DNA between bacteria.
 
-- Link to models: [Conjugation](https://github.com/gem-pasteur/Macsyfinder_models/tree/master/Data/Conjugation)
+- Link to models: [Conjugation](https://github.com/gem-pasteur/Macsyfinder_models/tree/master/models/Conjugation)
 - Webserver version: [Galaxy](https://galaxy.pasteur.fr/tool_runner?tool_id=toolshed.pasteur.fr%2Frepos%2Fodoppelt%2Fconjscan%2FConjScan%2F1.0.2)
 - References:
 
@@ -23,7 +23,7 @@ Conjugation is a mechanism allowing transfer of DNA between bacteria.
 
 detection of protein secretion systems and related appendages
 
-- Link to models: [Secretion Systems](https://github.com/gem-pasteur/Macsyfinder_models/tree/master/Data/TXSS)
+- Link to models: [Secretion Systems](https://github.com/gem-pasteur/Macsyfinder_models/tree/master/models/TXSS)
 - Webserver version: [Galaxy](https://galaxy.pasteur.fr/root?tool_id=toolshed.pasteur.fr%2Frepos%2Fodoppelt%2Ftxsscan%2FTXSScan%2F1.0.2)
 - References:
 
