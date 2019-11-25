@@ -15,7 +15,7 @@ where `secretion_system` is one of the list above, or `all` (see [MacSyFinder's 
 
 # Download
 
-To download only this module: [click here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/gem-pasteur/Macsyfinder_models/tree/master/Data/TXSS)
+To download only this module: [click here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/gem-pasteur/Macsyfinder_models/tree/master/models/TXSS)
 
 # References
 
