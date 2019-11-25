@@ -21,7 +21,7 @@ In the file `Tutorial_ICE.ipynb`, one can find how to detect conjugative systems
 
 # Download
 
-To download only this module: [click here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/gem-pasteur/Macsyfinder_models/tree/master/Data/Conjugation)
+To download only this module: [click here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/gem-pasteur/Macsyfinder_models/tree/master/models/Conjugation)
 
 # References
 
